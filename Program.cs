@@ -40,7 +40,7 @@ return;
 
 void EmpezarSimulación()
 {
-    while (contadorPasos <= 40 && contadorMinerales > 0)
+    while (contadorPasos <= 39 && contadorMinerales > 0) //39 para que el último paso que muestre por pantalla sea: 40
     {
         Clear();
         WriteLine($"==== PASO {contadorPasos + 1} ===="); //+1 para que sea "bonito" de ver
