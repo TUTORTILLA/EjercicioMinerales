@@ -28,7 +28,7 @@ int robotY = tamañoTabla / 2;
 int dirX = 0;
 int dirY = 1;
 
-CambiarDirecciónAleatoria(ref dirX, ref dirY, robotX, robotY);
+CambiarDirecciónAleatoria(ref dirX, ref dirY);
 
 //Empezamos la simulación
 EmpezarSimulación(); 
@@ -68,7 +68,7 @@ void EmpezarSimulación()
         }
         else //Si no hay minerales, cambiamos
         {
-            CambiarDirecciónAleatoria(ref dirX, ref dirY, robotX, robotY);
+            CambiarDirecciónAleatoria(ref dirX, ref dirY);
         }
 
         WriteLine($"POSICIÓN: Fila {robotY}, Columna {robotX}");
@@ -89,7 +89,7 @@ void EmpezarSimulación()
 
         while (EsFueraDeTabla(robotX + dirX, robotY + dirY))
         {
-            CambiarDirecciónAleatoria(ref dirX, ref dirY, robotX, robotY);
+            CambiarDirecciónAleatoria(ref dirX, ref dirY);
         }
         
         robotX += dirX;
@@ -134,7 +134,7 @@ void AsignarMinerales(int[,] valores)
     }
 }
 
-void CambiarDirecciónAleatoria(ref int dx, ref int dy, int x, int y)
+void CambiarDirecciónAleatoria(ref int dx, ref int dy)
 {
     do
     {
